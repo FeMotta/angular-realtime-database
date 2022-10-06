@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+        <tr>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Email</th>
+        <th>Opções</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let contato of contatos | async">
+        <td>{{contato.nome}}</td>
+        <td>{{contato.telefone}}</td>
+        <td>{{contato.email}}</td>
+        <td>
+            <div class="btn-group">
+                <button class="btn btn-primary" (click)="edit(contato, contato.key)">Editar</button>
+                <button class="btn btn-danger" (click)="delete(contato.key)">Remover</button>
+            </div>
+        </td>
+        </tr>
+    </tbody>
+</table>

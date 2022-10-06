@@ -1,0 +1,24 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="contato.nome" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="telefone" class="form-control" id="telefone" name="email" [(ngModel)]="contato.telefone" required>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="contato.email" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Salvar</button>
+    
+</form>
