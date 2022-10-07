@@ -15,7 +15,9 @@ export class ListComponent implements OnInit {
   constructor(private contatoService: ContatoService, private contatoDataService: ContatoDataService) { }
 
   ngOnInit(): void {
-    this.contatos = this.contatoService.getAll();
+    // this.contatos = this.contatoService.getAll()
+    // this.contatos = this.contatoService.getByName('Pessoa 2')
+    this.contatos = this.contatoService.getContactsInOrder()
   }
 
   delete(key: string) {
